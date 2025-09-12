@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Primeiro Acesso</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabaseClient.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header><h1>Estuda AÍ ⚡</h1><p>Ative sua conta</p></header>
+    <div class="area-conteudo">
+      <div id="etapa-email">
+        <h2>Receber link de acesso</h2>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" id="email" placeholder="voce@email.com">
+        </div>
+        <button onclick="enviarOtp()">Enviar link</button>
+      </div>
+
+      <div id="etapa-senha" class="hidden">
+        <h2>Criar sua senha</h2>
+        <div class="form-group">
+          <label>Nova senha</label>
+          <input type="password" id="nova-senha">
+        </div>
+        <button onclick="definirSenha()">Salvar senha</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Se veio de link de convite/recuperação, já mostra etapa de senha
+    (function(){
+      const hash = new URLSearchParams(window.location.hash.replace('#','?'));
+      const type = hash.get('type');
+      if (type === 'recovery' || type === 'invite'){
+        // O SDK troca o token por sessão automaticamente ao carregar, via hash
+        document.getElementById('etapa-email').classList.add('hidden');
+        document.getElementById('etapa-senha').classList.remove('hidden');
+      }
+      const qp = new URLSearchParams(window.location.search);
+      if (qp.get('email')) document.getElementById('email').value = qp.get('email');
+    })();
+
+    async function enviarOtp(){
+      const email = document.getElementById('email').value;
+      if (!email) return alert('Informe o email');
+      const { error } = await sb.auth.signInWithOtp({ email });
+      if (error) alert(error.message); else alert('Confirme o link enviado ao seu email.');
+    }
+
+    async function definirSenha(){
+      const senha = document.getElementById('nova-senha').value;
+      if (!senha) return alert('Informe a nova senha');
+      const { data:session } = await sb.auth.getSession();
+      if (!session || !session.session) { alert('Link inválido ou expirado. Solicite novamente.'); return; }
+      const { error } = await sb.auth.updateUser({ password: senha });
+      if (error) alert(error.message);
+      else { alert('Senha criada! Vamos verificar seu plano...'); window.location.href = 'dashboard.html'; }
+    }
+  </script>
+</body>
+</html>

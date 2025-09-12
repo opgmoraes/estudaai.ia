@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Estuda AÍ | Plataforma de estudos com IA — Mais acertos, menos estresse!</title>
+  <meta name="description" content="Estuda AÍ: resumos automáticos, quizzes personalizados e planejamento inteligente com IA. Experimente hoje.">
+  <meta name="author" content="Estuda AÍ">
+
+  <!-- Open Graph / Twitter (ajuste og:image para seu domínio após upload) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Estuda AÍ — Mais acertos, menos estresse!">
+  <meta property="og:description" content="Resumos automáticos, quizzes e planejamento com IA. Comece a estudar melhor hoje.">
+  <meta property="og:image" content="https://seudominio.com/assets/images/hero-illustration.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Estuda AÍ — Mais acertos, menos estresse!">
+  <meta name="twitter:description" content="Resumos automáticos, quizzes e planejamento com IA.">
+  <meta name="twitter:image" content="https://seudominio.com/assets/images/hero-illustration.png">
+
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- TODO: Google Tag Manager - cole seu snippet aqui -->
+  <!-- TODO: Meta Pixel - cole seu snippet aqui -->
+
+  <!-- FAQ schema (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Posso cancelar quando quiser?","acceptedAnswer":{"@type":"Answer","text":"Sim! Você pode cancelar a qualquer momento sem taxas extras. Reembolso em até 7 dias."}},
+      {"@type":"Question","name":"Tenho garantia?","acceptedAnswer":{"@type":"Answer","text":"Sim — garantia de 7 dias para experimentar sem riscos."}},
+      {"@type":"Question","name":"O modo turbo me deixa mais inteligente em 1 hora?","acceptedAnswer":{"@type":"Answer","text":"Quase! O Modo Turbo acelera revisão e prática, mas estudo consistente traz os melhores resultados."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="#topo" class="brand" aria-label="Estuda AÍ - ir ao topo"><img src="assets/images/logotext.png" alt="Estuda AÍ" class="logo"></a>
+      <nav class="nav" role="navigation" aria-label="Menu principal">
+        <a href="#beneficios">Benefícios</a>
+        <a href="#planos">Planos</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+      <div class="actions">
+        <a class="btn btn-cta" id="ctaHeader" href="#planos">Assinar agora</a>
+        <button class="hamb" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#planos">Planos</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#faq">Dúvidas</a>
+      <a class="btn btn-cta" href="#planos">Assinar agora</a>
+    </div>
+  </header>
+
+  <main id="topo">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero Estuda AÍ">
+      <div class="parallax-layer parallax-bg" data-speed="0.2" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h1>Mais acertos, menos estresse! <span class="emoji" aria-hidden="true">🎯</span></h1>
+          <p class="lead">Estudar nunca foi tão leve. IA que resume, organiza e personaliza seus estudos.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary cta-variant" data-variant="A" href="#planos" data-original-text="✨ Ver planos">✨ Ver planos</a>
+            <a class="btn btn-ghost cta-variant" data-variant="A" href="#avaliacoes" data-original-text="⭐ Avaliações">⭐ Avaliações</a>
+            <a class="btn btn-ghost cta-variant" data-variant="A" href="#faq" data-original-text="❓ Dúvidas">❓ Dúvidas</a>
+          </div>
+          <div class="metrics" aria-hidden="true">
+            <div class="metric"><strong>+100</strong><span>alunos testando</span></div>
+            <div class="metric"><strong>8/10</strong><span>nota média</span></div>
+            <div class="metric"><strong>+90%</strong><span>satisfação</span></div>
+          </div>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="hero-mockup" id="heroMockup" data-speed="0.5">
+            <picture>
+              <source srcset="assets/images/hero-illustration.png" type="image/png">
+              <img src="assets/images/hero-illustration.png" alt="Interface Estuda AÍ" class="hero-illustration" id="heroImg">
+            </picture>
+            <div class="mockup-glow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section id="beneficios" class="section">
+      <div class="container">
+        <h2>Benefícios que aceleram seus estudos</h2>
+        <p class="subtitle">Ferramentas projetadas para reduzir tempo de estudo e aumentar resultados.</p>
+        <div class="benefit-grid">
+          <article class="benefit-card reveal"><div class="ico">📅</div><h3>Planejamento de Estudos</h3><p>Seu cronograma sem estresse, tudo no tempo certo.</p></article>
+          <article class="benefit-card reveal"><div class="ico">💬</div><h3>Chat Bot de IA</h3><p>Um amigo nerd 24h para responder suas dúvidas.</p></article>
+          <article class="benefit-card reveal"><div class="ico">📝</div><h3>Gerador de Resumos</h3><p>Resumos prontos sem suar a camisa.</p></article>
+          <article class="benefit-card reveal"><div class="ico">❓</div><h3>Quiz Personalizado</h3><p>Desafios rápidos para provar que você sabe mesmo.</p></article>
+          <article class="benefit-card reveal"><div class="ico">⏳</div><h3>Modo Pomodoro</h3><p>Estude focado e faça pausas sem culpa.</p></article>
+          <article class="benefit-card reveal"><div class="ico">⚡</div><h3>Modo Turbo</h3><p>Aprenda na velocidade da luz (quase).</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section features">
+      <div class="container">
+        <div class="feature">
+          <div class="feature-media reveal"><img src="assets/images/hero-illustration.png" alt="Atendimento com IA"></div>
+          <div class="feature-body">
+            <h3>Atendimento e suporte com IA</h3>
+            <p>Responda dúvidas, receba resumos e pratique com quizzes adaptativos.</p>
+            <a class="link" href="#planos">Veja planos</a>
+          </div>
+        </div>
+        <div class="feature reverse">
+          <div class="feature-media reveal"><img src="assets/images/hero-illustration.png" alt="Trilhas personalizadas"></div>
+          <div class="feature-body">
+            <h3>Trilhas personalizadas</h3>
+            <p>Planos de estudo que acompanham seu progresso.</p>
+            <a class="link" href="#planos">Assine agora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="avaliacoes" class="section section--alt">
+      <div class="container">
+        <h2>O que nossos alunos dizem</h2>
+        <div class="testimonials" id="testimonials">
+          <div class="testimonial reveal"><div class="stars" aria-hidden="true">⭐⭐⭐⭐⭐</div><p>“Mesmo no começo, a plataforma já virou meu cronograma — resumos e quizzes me deram mais confiança!”</p><cite>— Mariana Silva</cite></div>
+          <div class="testimonial reveal"><div class="stars" aria-hidden="true">⭐⭐⭐⭐⭐</div><p>“Modo Turbo é viciante. Resumo + quiz na hora = memorização muito mais rápida.”</p><cite>— Rafael Costa</cite></div>
+          <div class="testimonial reveal"><div class="stars" aria-hidden="true">⭐⭐⭐⭐⭐</div><p>“Adorei os ciclos de Pomodoro, consigo focar de verdade e entender onde estou errando.”</p><cite>— Joana Pereira</cite></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PLANS -->
+    <section id="planos" class="section plans-section">
+      <div class="container">
+        <h2>Escolha seu plano</h2>
+        <p class="subtitle">Assinatura simples, comece a estudar hoje mesmo.</p>
+        <div class="plans-grid">
+          <div class="plan-card reveal">
+            <h3>Mensal</h3>
+            <div class="price">R$ <strong>21,90</strong><span>/mês</span></div>
+            <ul class="features-list"><li>Pagamento único: R$ 21,90</li><li>Duração: 1 mês</li><li>7 dias para pedir reembolso</li></ul>
+            <a class="btn btn-primary btn-checkout cta-variant" data-variant="A" href="https://pay.cakto.com.br/cjejwgy_545213" data-original-text="Assine agora">Assine agora</a>
+          </div>
+
+          <div class="plan-card highlight reveal">
+            <div class="badge animated-badge" aria-hidden="true">✨ Melhor escolha</div>
+            <h3>Trimestral</h3>
+            <div class="price">R$ <strong>55,68</strong><span> à vista</span></div>
+            <div class="meta">ou 3x de R$ 18,56</div>
+            <ul class="features-list"><li>Duração: 3 meses</li><li>7 dias para pedir reembolso</li></ul>
+            <a class="btn btn-primary btn-checkout btn-glow cta-variant" data-variant="A" href="https://pay.cakto.com.br/32z9aia" data-original-text="Assine agora">Assine agora</a>
+          </div>
+
+          <div class="plan-card reveal">
+            <h3>Anual</h3>
+            <div class="price">R$ <strong>125,90</strong><span> à vista</span></div>
+            <div class="meta">ou 12x de R$ 14,64</div>
+            <ul class="features-list"><li>Duração: 1 ano</li><li>Economize R$ 136,90 (≈52%)</li><li>7 dias reembolso</li></ul>
+            <a class="btn btn-primary btn-checkout cta-variant" data-variant="A" href="https://pay.cakto.com.br/sytv76f" data-original-text="Economizar">Economizar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="container">
+        <h2>Dúvidas frequentes</h2>
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-toggle" aria-expanded="false">Posso cancelar quando quiser? <span class="icon">+</span></button><div class="faq-body">Sim! Você pode cancelar a qualquer momento sem taxas extras. Reembolso em até 7 dias.</div></div>
+          <div class="faq-item"><button class="faq-toggle" aria-expanded="false">Tenho garantia? <span class="icon">+</span></button><div class="faq-body">Sim — garantia de 7 dias para experimentar sem riscos.</div></div>
+          <div class="faq-item"><button class="faq-toggle" aria-expanded="false">O modo turbo me deixa mais inteligente em 1 hora? <span class="icon">+</span></button><div class="faq-body">Quase! O Modo Turbo ajuda a revisar e fixar rápido, mas a prática consistente é o segredo real.</div></div>
+          <div class="faq-item"><button class="faq-toggle" aria-expanded="false">A IA faz a prova por mim? <span class="icon">+</span></button><div class="faq-body">Não. A IA ajuda você a estudar melhor, não a trapacear. ;)</div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sticky CTA bar -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="false">
+    <div class="sticky-inner">
+      <div class="sticky-info"><strong>Comece por R$21,90/mês</strong><small>7 dias de garantia</small></div>
+      <a class="btn btn-primary btn-checkout sticky-btn cta-variant" data-variant="A" href="https://pay.cakto.com.br/cjejwgy_545213" data-original-text="Assinar agora">Assinar agora</a>
+      <button class="sticky-close" aria-label="Fechar banner">✕</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="brand"><img src="assets/images/logotext.png" alt="Estuda AÍ" class="footer-logo"><p>Mais acertos, menos estresse!</p></div>
+      <div class="links"><a href="#">Política de privacidade</a><a href="#">Termos de uso</a><a href="https://instagram.com/etudaai.ia" target="_blank">Instagram</a></div>
+      <div class="contact"><p>Fale com a gente</p><a href="mailto:contato@estudaai.com">contato@estudaai.com</a></div>
+    </div>
+  </footer>
+
+  <a class="floating-cta" href="#planos" aria-label="Assinar agora">⚡</a>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

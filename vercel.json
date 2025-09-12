@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/vendas/index.html" },
+    { "source": "/login", "destination": "/vendas/login.html" },
+    { "source": "/app/:path*", "destination": "/sistema/:path*" },
+    { "source": "/api/:path*", "destination": "/api/:path*" }
+  ]
+}
